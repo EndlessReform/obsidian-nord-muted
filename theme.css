@@ -1,34 +1,91 @@
-body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+.theme-dark {
+	color-scheme: dark;
+	--highlight-mix-blend-mode: lighten;
+
+	/* Mapping Obsidian's mono colors to Nord's Polar Night and Snow Storm for contrast */
+	--mono-rgb-0: 46, 52, 64; /* Nord's polar night darkest, nord0 */
+	--mono-rgb-100: 216, 222, 233; /* Nord's snow storm lightest, nord6 */
+
+	/* Nord Frost values */
+	--color-nord7: #8fbcbb;
+	--color-nord8-rgb: 136, 192, 208;
+	--color-nord8: #88c0d0;
+	--color-nord9: #81a1c1;
+	--color-nord10: #5e81ac;
+
+	/* Adapting Obsidian's color accents to Nord's Frost and Aurora palettes */
+	--color-red-rgb: 191, 97, 106; /* Aurora red, nord11 */
+	--color-red: #bf616a;
+	--color-orange-rgb: 208, 135, 112; /* Aurora orange, not a direct Nord match, adjusted for muted tone */
+	--color-orange: #d08770;
+	--color-yellow-rgb: 235, 203, 139; /* Aurora yellow, nord13 */
+	--color-yellow: #ebcb8b;
+	--color-green-rgb: 163, 190, 140; /* Aurora green, nord14 */
+	--color-green: #a3be8c;
+	--color-cyan-rgb: var(--color-nord8-rgb); /* Frost, nord8 */
+	--color-cyan: var(--color-nord8);
+	--color-blue-rgb: 94, 129, 172; /* Frost, nord9 */
+	--color-blue: #5e81ac;
+	--color-purple-rgb: 180, 142, 173; /* Aurora purple, not a direct match, adjusted for theme consistency */
+	--color-purple: #b48ead;
+	--color-pink-rgb: 216, 222, 233; /* Snow Storm, using as a substitute for pink, nord6 */
+	--color-pink: #d8dee9;
+
+	/* Base colors, using Nord's Polar Night with slight adjustments for gradation */
+	--color-base-neg1: #242933;
+	--color-base-00: #2e3440; /* nord0 */
+	--color-base-05: #3b4252; /* nord1 */
+	--color-base-10: #434c5e; /* nord2 */
+	--color-base-20: #4c566a; /* nord3 */
+	--color-base-25: #4c566a; /* Using the same as --color-base-20 for smooth transitions */
+	--color-base-30: #5e81ac; /* Frost, slightly brighter for contrast, nord9 */
+	--color-base-35: #5e81ac; /* Same as --color-base-30 to maintain consistency */
+	--color-base-40: #81a1c1; /* Frost, nord10 */
+	--color-base-50: #88c0d0; /* Frost, nord8 */
+	--color-base-60: #d8dee9; /* Snow Storm, nord4 */
+	--color-base-70: #e5e9f0; /* Snow Storm, nord5 */
+	--color-base-100: #eceff4; /* Using the lightest Snow Storm for highest contrast, nord5 */
+
+	/* Explicitly add Nord colors */
+
+	/* Background: Override colors to be darker */
+	--background-primary-alt: var(--color-base-neg1);
+	--background-secondary: var(--color-base-00);
+	--background-secondary-alt: var(--color-base-05);
+	--background-modifier-border: var(--color-base-20);
+	--interactive-normal: var(--color-base-20);
+	--status-bar-background: var(--background-secondary-alt);
+	--titlebar-background: var(--color-base-00);
+	--titlebar-background-focused: var(--color-base-neg1);
+
+	/* Text */
+	--text-faint: var(--color-base-25);
+	--text-highlight-bg: rgba(var(--color-blue-rgb), 0.6);
+	--text-normal: var(--color-base-70);
+	--internal-link-color: var(--color-purple);
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+.cm-s-obsidian span.cm-inline-code {
+	background-color: var(--background-secondary-alt);
+	color: var(--color-nord8);
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+.markdown-rendered code {
+	background-color: var(--background-secondary-alt);
+	color: var(--color-nord8);
 }
 
-.menu {
-	padding: var(--size-2-1);
+.theme-dark .markdown-source-view {
+	--h2-color: var(--color-nord8);
+	--h3-color: var(--color-nord9);
 }
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+.theme-dark .vertical-tab-header {
+	background-color: var(--background-secondary-alt);
 }
-
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+.theme-dark a.internal-link {
+	color: var(--internal-link-color);
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link {
+	color: var(--internal-link-color);
 }
