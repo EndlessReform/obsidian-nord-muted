@@ -185,6 +185,10 @@ body {
 	color: var(--color-nord8);
 }
 
+.theme-dark .markdown-rendered pre > code {
+	background-color: var(--color-base-neg1);
+}
+
 /* Settings pane */
 .vertical-tab-header {
 	background-color: var(--background-secondary-alt);
