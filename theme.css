@@ -1,52 +1,162 @@
+body {
+	/* Polar Night */
+	--color-nord0: #2e3440;
+	--color-nord0-rgb: 46, 52, 64;
+	--color-nord1: #3b4252;
+	--color-nord1-rgb: 59, 66, 82;
+	--color-nord2: #434c5e;
+	--color-nord2-rgb: 67, 76, 94;
+	--color-nord3: #4c566a;
+	--color-nord3-rgb: 76, 86, 106;
+
+	/* Snow Storm */
+	--color-nord4: #d8dee9;
+	--color-nord4-rgb: 216, 222, 233;
+	--color-nord5: #e5e9f0;
+	--color-nord5-rgb: 229, 233, 240;
+	--color-nord6: #eceff4;
+	--color-nord6-rgb: 236, 239, 244;
+
+	/* Frost */
+	--color-nord7: #8fbcbb;
+	--color-nord7-rgb: 143, 188, 187;
+	--color-nord8: #88c0d0;
+	--color-nord8-rgb: 136, 192, 208;
+	--color-nord9: #81a1c1;
+	--color-nord9-rgb: 129, 161, 193;
+	--color-nord10: #5e81ac;
+	--color-nord10-rgb: 94, 129, 172;
+
+	/* Aurora */
+	--color-nord11: #bf616a;
+	--color-nord11-rgb: 191, 97, 106;
+	--color-nord12: #d08770;
+	--color-nord12-rgb: 208, 135, 112;
+	--color-nord13: #ebcb8b;
+	--color-nord13-rgb: 235, 203, 139;
+	--color-nord14: #a3be8c;
+	--color-nord14-rgb: 163, 190, 140;
+	--color-nord15: #b48ead;
+	--color-nord15-rgb: 180, 142, 173;
+
+	--internal-link-color: var(--color-nord15);
+	--external-link-color: var(--color-nord9);
+}
+
+.theme-light {
+	color-scheme: light;
+
+	/* Mapping Obsidian's mono colors to Nord's Polar Night and Snow Storm for contrast */
+	--mono-rgb-100: var(
+		--color-nord0-rgb
+	); /* Nord's polar night darkest, nord0 */
+	--mono-rgb-0: var(
+		--color-nord6-rgb
+	); /* Nord's snow storm lightest, nord6 */
+	/* Obsidian color accents: from Nord's Frost and Aurora palettes */
+	--color-red-rgb: var(--color-nord11-rgb); /* Aurora red, nord11 */
+	--color-red: var(--color-nord11);
+	--color-orange-rgb: var(--color-nord12-rgb); /* adjusted for muted tone */
+	--color-orange: var(--color-nord12);
+	--color-yellow-rgb: var(--color-nord13-rgb); /* Aurora yellow, nord13 */
+	--color-yellow: var(--color-nord13);
+	--color-green-rgb: var(--color-nord14-rgb); /* Aurora green, nord14 */
+	--color-green: var(--color-nord14);
+	--color-cyan-rgb: var(--color-nord8-rgb); /* Frost, nord8 */
+	--color-cyan: var(--color-nord8);
+	--color-blue-rgb: var(--color-nord9-rgb); /* Frost, nord9 */
+	--color-blue: var(--color-nord9);
+	--color-purple-rgb: var(--color-nord15-rgb); /* Not a direct match */
+	--color-purple: var(--color-nord15);
+	--color-pink-rgb: var(--color-nord6-rgb); /* substituting nord6 for pink */
+	--color-pink: var(--color-nord6);
+
+	/* Mapping Obsidian base colors to Nord theme equivalents */
+	--color-base-00: var(--color-nord6); /* Lightest background */
+	--color-base-05: var(
+		--color-nord5
+	); /* Slightly darker than --color-base-00 */
+	--color-base-10: var(--color-nord5); /* Used for subtle UI elements */
+	--color-base-20: var(--color-nord5); /* Slightly darker UI elements */
+	--color-base-25: var(
+		--color-nord4
+	); /* Active text fields, selected items */
+	--color-base-30: var(--color-nord4); /* Hover states */
+	--color-base-35: var(--color-nord3); /* Secondary text */
+	--color-base-40: var(
+		--color-nord3
+	); /* Distracting or less important text */
+	--color-base-50: var(--color-nord2); /* Comments, auxiliary text */
+	--color-base-60: var(--color-nord1); /* Primary UI elements, borders */
+	--color-base-70: var(--color-nord1); /* Strong emphasis */
+	--color-base-100: var(--color-nord0); /* Primary text and UI contrast */
+
+	--blockquote-color: var(--color-nord3);
+	--background-modifier-hover: rgba(var(--mono-rgb-100), 0.05);
+	--modal-border-color: var(
+		--color-base-25,
+		var(--background-modifier-border-focus)
+	);
+}
+
 .theme-dark {
 	color-scheme: dark;
 	--highlight-mix-blend-mode: lighten;
 
 	/* Mapping Obsidian's mono colors to Nord's Polar Night and Snow Storm for contrast */
-	--mono-rgb-0: 46, 52, 64; /* Nord's polar night darkest, nord0 */
-	--mono-rgb-100: 216, 222, 233; /* Nord's snow storm lightest, nord6 */
-
-	/* Nord Frost values */
-	--color-nord7: #8fbcbb;
-	--color-nord8-rgb: 136, 192, 208;
-	--color-nord8: #88c0d0;
-	--color-nord9: #81a1c1;
-	--color-nord10: #5e81ac;
+	--mono-rgb-0: var(
+		--color-nord0-rgb
+	); /* Nord's polar night darkest, nord0 */
+	--mono-rgb-100: var(
+		--color-nord6-rgb
+	); /* Nord's snow storm lightest, nord6 */
 
 	/* Adapting Obsidian's color accents to Nord's Frost and Aurora palettes */
-	--color-red-rgb: 191, 97, 106; /* Aurora red, nord11 */
-	--color-red: #bf616a;
-	--color-orange-rgb: 208, 135, 112; /* Aurora orange, not a direct Nord match, adjusted for muted tone */
-	--color-orange: #d08770;
-	--color-yellow-rgb: 235, 203, 139; /* Aurora yellow, nord13 */
-	--color-yellow: #ebcb8b;
-	--color-green-rgb: 163, 190, 140; /* Aurora green, nord14 */
-	--color-green: #a3be8c;
+	--color-red-rgb: var(--color-nord11-rgb); /* Aurora red, nord11 */
+	--color-red: var(--color-nord11);
+	--color-orange-rgb: var(
+		--color-nord12-rgb
+	); /* Aurora orange, not a direct Nord match, adjusted for muted tone */
+	--color-orange: var(--color-nord12);
+	--color-yellow-rgb: var(--color-nord13-rgb); /* Aurora yellow, nord13 */
+	--color-yellow: var(--color-nord13);
+	--color-green-rgb: var(--color-nord14-rgb); /* Aurora green, nord14 */
+	--color-green: var(--color-nord14);
 	--color-cyan-rgb: var(--color-nord8-rgb); /* Frost, nord8 */
 	--color-cyan: var(--color-nord8);
-	--color-blue-rgb: 94, 129, 172; /* Frost, nord9 */
-	--color-blue: #5e81ac;
-	--color-purple-rgb: 180, 142, 173; /* Aurora purple, not a direct match, adjusted for theme consistency */
-	--color-purple: #b48ead;
-	--color-pink-rgb: 216, 222, 233; /* Snow Storm, using as a substitute for pink, nord6 */
-	--color-pink: #d8dee9;
+	--color-blue-rgb: var(--color-nord9-rgb); /* Frost, nord9 */
+	--color-blue: var(--color-nord9);
+	--color-purple-rgb: var(
+		--color-nord15-rgb
+	); /* Aurora purple, not a direct match, adjusted for theme consistency */
+	--color-purple: var(--color-nord15);
+	--color-pink-rgb: var(
+		--color-nord6-rgb
+	); /* Snow Storm, using as a substitute for pink, nord6 */
+	--color-pink: var(--color-nord6);
 
 	/* Base colors, using Nord's Polar Night with slight adjustments for gradation */
 	--color-base-neg1: #242933;
-	--color-base-00: #2e3440; /* nord0 */
-	--color-base-05: #3b4252; /* nord1 */
-	--color-base-10: #434c5e; /* nord2 */
-	--color-base-20: #4c566a; /* nord3 */
-	--color-base-25: #4c566a; /* Using the same as --color-base-20 for smooth transitions */
-	--color-base-30: #5e81ac; /* Frost, slightly brighter for contrast, nord9 */
-	--color-base-35: #5e81ac; /* Same as --color-base-30 to maintain consistency */
-	--color-base-40: #81a1c1; /* Frost, nord10 */
-	--color-base-50: #88c0d0; /* Frost, nord8 */
-	--color-base-60: #d8dee9; /* Snow Storm, nord4 */
-	--color-base-70: #e5e9f0; /* Snow Storm, nord5 */
-	--color-base-100: #eceff4; /* Using the lightest Snow Storm for highest contrast, nord5 */
-
-	/* Explicitly add Nord colors */
+	--color-base-00: var(--color-nord0); /* nord0 */
+	--color-base-05: var(--color-nord1); /* nord1 */
+	--color-base-10: var(--color-nord2); /* nord2 */
+	--color-base-20: var(--color-nord3); /* nord3 */
+	--color-base-25: var(
+		--color-nord3
+	); /* Using the same as --color-base-20 for smooth transitions */
+	--color-base-30: var(
+		--color-nord9
+	); /* Frost, slightly brighter for contrast, nord9 */
+	--color-base-35: var(
+		--color-nord9
+	); /* Same as --color-base-30 to maintain consistency */
+	--color-base-40: var(--color-nord10); /* Frost, nord10 */
+	--color-base-50: var(--color-nord8); /* Frost, nord8 */
+	--color-base-60: var(--color-nord4); /* Snow Storm, nord4 */
+	--color-base-70: var(--color-nord5); /* Snow Storm, nord5 */
+	--color-base-100: var(
+		--color-nord6
+	); /* Using the lightest Snow Storm for highest contrast, nord5 */
 
 	/* Background: Override colors to be darker */
 	--background-primary-alt: var(--color-base-neg1);
@@ -62,30 +172,42 @@
 	--text-faint: var(--color-base-25);
 	--text-highlight-bg: rgba(var(--color-blue-rgb), 0.6);
 	--text-normal: var(--color-base-70);
-	--internal-link-color: var(--color-purple);
 }
 
-.cm-s-obsidian span.cm-inline-code {
+/* Make code more obvious */
+.theme-dark .cm-s-obsidian span.cm-inline-code {
 	background-color: var(--background-secondary-alt);
 	color: var(--color-nord8);
 }
 
-.markdown-rendered code {
+.theme-dark .markdown-rendered code {
 	background-color: var(--background-secondary-alt);
 	color: var(--color-nord8);
 }
 
-.theme-dark .markdown-source-view {
-	--h2-color: var(--color-nord8);
-	--h3-color: var(--color-nord9);
-}
-
-.theme-dark .vertical-tab-header {
+/* Settings pane */
+.vertical-tab-header {
 	background-color: var(--background-secondary-alt);
 }
-.theme-dark a.internal-link {
+.theme-dark .vertical-tab-header-group-title {
+	color: var(--color-base-60);
+	text-transform: uppercase;
+}
+
+.checkbox-container {
+	background-color: var(--interactive-normal);
+}
+
+/* Separate internal and external links */
+.markdown-rendered a.internal-link {
 	color: var(--internal-link-color);
 }
-.theme-dark .cm-s-obsidian span.cm-hmd-internal-link {
+a.external-link {
+	color: var(--external-link-color);
+}
+.cm-s-obsidian span.cm-hmd-internal-link {
 	color: var(--internal-link-color);
+}
+.cm-s-obsidian span.cm-link {
+	color: var(--external-link-color);
 }
