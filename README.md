@@ -1,6 +1,7 @@
 # Obsidian Nord Muted Theme
 
-<img alt="Example screen" src="./docs/sample.png" width="480" />
+
+<img alt="Example screen" src="./docs/sample.png" />
 
 A simple port of the [Nord](https://www.nordtheme.com) editor theme to [Obsidian](https://obsidian.md).
 Compared to the existing [Obsidian Nord](https://github.com/insanum/obsidian_nord) theme, this theme is a bit quieter, darker, and less opinionated.
