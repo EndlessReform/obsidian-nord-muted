@@ -86,8 +86,8 @@ body {
 	--color-base-40: var(
 		--color-nord3
 	); /* Distracting or less important text */
-	--color-base-50: var(--color-nord2); /* Comments, auxiliary text */
-	--color-base-60: var(--color-nord1); /* Primary UI elements, borders */
+	--color-base-50: var(--color-nord3); /* Comments, auxiliary text */
+	--color-base-60: var(--color-nord2); /* Primary UI elements, borders */
 	--color-base-70: var(--color-nord1); /* Strong emphasis */
 	--color-base-100: var(--color-nord0); /* Primary text and UI contrast */
 
@@ -214,4 +214,14 @@ a.external-link {
 }
 .cm-s-obsidian span.cm-link {
 	color: var(--external-link-color);
+}
+
+.is-unresolved {
+	--link-unresolved-color: var(--color-purple);
+	--link-unresolved-decoration-color: hsla(var(--link-unresolved-color), 0.3);
+}
+
+/* Gutter */
+.theme-light .cm-lineNumbers {
+	color: var(--color-nord4);
 }

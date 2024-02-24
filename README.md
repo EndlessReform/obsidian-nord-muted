@@ -1,5 +1,6 @@
 # Obsidian Nord Muted Theme
 
+
 <img alt="Example screen" src="./docs/sample.png" />
 
 A simple port of the [Nord](https://www.nordtheme.com) editor theme to [Obsidian](https://obsidian.md).
