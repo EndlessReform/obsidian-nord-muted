@@ -1,30 +1,31 @@
-This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)).
+# Obsidian Nord Muted Theme
 
-## First Time publishing a theme?
+<img alt="Example screen" src="./docs/sample.png" width="480" />
 
-### Quick start
+A simple port of the [Nord](https://www.nordtheme.com) editor theme to [Obsidian](https://obsidian.md).
+Compared to the existing [Obsidian Nord](https://github.com/insanum/obsidian_nord) theme, this theme is a bit quieter, darker, and less opinionated.
 
-<img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
+## ⚠️ Warning
 
-First, choose **Use this template**. That will create a copy of this repository (repo) under your Github profile. Then, you will want to _clone_ your new repository to your computer.
+-   Not tested on mobile!
+-   Not tested on Obsidian Publish!
+-   Not in the Theme Gallery!
 
-Once you have the repo locally on your computer, there are a couple of placeholder fields you will need to fill in.
+Feel free to make a request in a GH Issue if you want support.
 
-1. Inside the `manifest.json` file, change the "name" field to whatever you want the name of your theme to be. For example:
+## Installation
 
-  ```json
-  {
-    "name": "Moonstone",
-    "version": "0.0.0",
-    "minAppVersion": "1.0.0"
-  }
-  ```
+1. Go to `Settings -> Appearance`, and find the Themes folder. The path should look something like `$YOUR_VAULT_FOLDER/.obsidian/themes`.
 
-2. Also inside the manifest.json file, you can include your name under next to the "author" field.
+<img alt="Theme folder location" src="./docs/theme_folder.png" width="480" />
 
-After you have those fields configured, all that's left to do is add your styles! All of your CSS needs to be inside the file `theme.css` which is located at root of your repository.
+2. From your terminal, open the theme folder and clone this repo. Do NOT change the folder name.
+3. Back in the Obsidian `Settings -> Appearance -> Themes`, select `nord_muted`.
+4. Change your Accent color to one of the [Nord colors](https://www.nordtheme.com/docs/colors-and-palettes). Choose from the Frost or the Aurora palettes.
 
-## Adding your theme to the Theme Gallery
+If these steps are too technical or annoying, please make a request in GH Issues and I'll try adding this to the Theme Gallery.
+
+## Adding your theme to the Theme Gallery (for maintainers)
 
 ### Add a screenshot thumbnail
 
@@ -44,7 +45,7 @@ If your theme is getting more and more complex, you might want to start thinking
 ### Steps for releasing the initial version of your theme (1.0.0)
 
 1. From your theme's repository, click on "Releases".
-   
+
 <img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
 
 2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
@@ -52,24 +53,25 @@ If your theme is getting more and more complex, you might want to start thinking
 <img width="202" alt="Pasted image 20220822145048" src="https://user-images.githubusercontent.com/693981/186000664-6c63ae14-f685-4d39-bfe6-324f95cd9669.png">
 
 3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+    - **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
+      <img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
+    - **Release Title**: This can be the version number.
+    - **Description** _Optional_: Anything that changed
+    - **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
 
 <img width="946" alt="Pasted image 20220822145356" src="https://user-images.githubusercontent.com/693981/186000772-e689ecea-c3b7-4e9d-9204-7ad62c0123aa.png">
 
 4. Click "Publish Release."
 5. Make sure that `versions.json` is set up correctly. This file is a map.
-  ```json
-  {
-    "1.0.0": "0.16.0"
-  }
-  ```
-  
-  This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
- 
+
+```json
+{
+	"1.0.0": "0.16.0"
+}
+```
+
+This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
+
 ### Steps for releasing new versions
 
 Releasing a new version of your theme is the same as releasing the initial version.
@@ -77,19 +79,21 @@ Releasing a new version of your theme is the same as releasing the initial versi
 1. From your theme's repository, click on "Releases."
 2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
 3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+
+    - **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
+      <img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
+    - **Release Title**: This can be the version number.
+    - **Description** _Optional_: Anything that changed
+    - **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
 
 4. Click "Publish Release."
 5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
-  ```json
-  {  
-		"1.0.0": "0.16.0",
-		"1.0.1": "0.16.0"
-  }
-  ```
 
-  What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
+```json
+{
+	"1.0.0": "0.16.0",
+	"1.0.1": "0.16.0"
+}
+```
+
+What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
